@@ -13,7 +13,7 @@ const SetCategories = ({ data }) => {
     useEffect(() => {
         const fetchContent = async () => {
             try {
-                const response = await axios.get(`https://api.storenana.my.id/products/filter?slug=${selectedSlug}`);
+                const response = await axios.get(`https://api.tokofairy.my.id/products/filter?slug=${selectedSlug}`);
                 setContent(response.data[0]);
                 setEditedContent(response.data[0]);
             } catch (error) {
@@ -56,7 +56,7 @@ const SetCategories = ({ data }) => {
                     formData.append('image', selectedImage);
                 }
 
-                const response = await axios.put('https://api.storenana.my.id/products/update-category', formData, {
+                const response = await axios.put('https://api.tokofairy.my.id/products/update-category', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }
@@ -99,7 +99,7 @@ const SetCategories = ({ data }) => {
                 confirmButtonText: 'Yes, delete it!'
             });
             if (result.isConfirmed) {
-                const response = await axios.delete('https://api.storenana.my.id/products/delete-category', {
+                const response = await axios.delete('https://api.tokofairy.my.id/products/delete-category', {
                     data: { slug: selectedSlug }
                 });
                 if (response.data.success) {

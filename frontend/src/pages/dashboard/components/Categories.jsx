@@ -54,7 +54,7 @@ const Categories = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post('https://api.storenana.my.id/products/upload-data', payload, {
+      const response = await axios.post('https://api.tokofairy.my.id/products/upload-data', payload, {
         headers: {
           'Content-Type': 'multipart/form-data',
         }

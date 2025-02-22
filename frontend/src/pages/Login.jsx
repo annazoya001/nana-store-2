@@ -36,7 +36,7 @@ const Login = () => {
         setLoading(true);
         setError('');
         try {
-            const response = await axios.post('https://api.storenana.my.id/login', { email, password });
+            const response = await axios.post('https://api.tokofairy.my.id/login', { email, password });
             if (response.data.success) {
                 setSuccessMessage('Login successful!');
                 localStorage.setItem('access_token', response.data.access_token);

@@ -4,7 +4,7 @@ import { Search, Loader2, RefreshCcw } from 'lucide-react';
 import { Alert, AlertDescription } from './Alert';
 
 const HeroSection = () => {
-    const EndpointUrl = 'https://api.storenana.my.id/products';
+    const EndpointUrl = 'https://api.tokofairy.my.id/products';
     const [data, setData] = useState([]);
     const [groupedData, setGroupedData] = useState({});
     const [isLoading, setIsLoading] = useState(true);
